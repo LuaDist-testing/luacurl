@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "luacurl"
-version = "1.1-2"
+version = "1.1-3"
 -- LuaDist source
 source = {
-  tag = "1.1-2",
+  tag = "1.1-3",
   url = "git://github.com/LuaDist-testing/luacurl.git"
 }
 -- Original source
@@ -18,7 +18,7 @@ description = {
       LuaCURL is Lua 5.x compatible module providing Internet browsing
       capabilities based on the CURL library. The module interface
       follows strictly the CURl architecture and is very easy to use
-      if the programmer has already experience with CURL. 
+      if the programmer has already experience with CURL.
    ]],
    homepage = "http://luaforge.net/projects/luacurl/",
    license = "MIT/X11"
@@ -32,13 +32,13 @@ external_dependencies = {
    }
 }
 build = {
-   type = "command",
-   platforms = {
-      unix = {
-         build_command = "$(CC) -o luacurl.so $(LIBFLAG) -I$(LUA_INCDIR) -I$(CURL_INCDIR) -L$(CURL_LIBDIR) -lcurl",
-         install = {
-            lib = { "luacurl.so" }
-         }
-      }
+   type = "builtin",
+   modules = {
+     luacurl = {
+       sources = { "luacurl.c" },
+       libraries = { "curl" },
+       incdirs = { "$(CURL_INCDIR)" },
+       libdirs = { "$(CURL_LIBDIR)" }
+ 	 }
    }
 }
