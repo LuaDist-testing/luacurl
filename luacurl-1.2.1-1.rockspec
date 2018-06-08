@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "luacurl"
-version = "1.1-3"
+version = "1.2.1-1"
 -- LuaDist source
 source = {
-  tag = "1.1-3",
+  tag = "1.2.1-1",
   url = "git://github.com/LuaDist-testing/luacurl.git"
 }
 -- Original source
 -- source = {
---    url = "http://luaforge.net/frs/download.php/1651/luacurl-1.1.zip",
---    md5 = "ebc4758bb1f7774a50d3e20f36fdff39"
+--    url = "http://luaforge.net/frs/download.php/3342/luacurl-1.2.1.zip",
+--    md5 = "4c83710a0fc5ca52818e5ec0101c4395"
 -- }
 description = {
    summary = "Lua module binding CURL",
